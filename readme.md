@@ -28,7 +28,7 @@
  
 
 **Commands:** 
-   + `helm install`: Deploys your application for the first time
+   + `helm install nginx . --> ". represents current directory"`: Deploys your application for the first time
      + What does helm install do under the hood?
        + Reads all files in templates/
        + Loads the variables from values.yaml (and overrides)
@@ -36,7 +36,7 @@
        + Sends these YAMLs to Kubernetes using kubectl apply internally
        + Tracks this deployment as a release (with versioning)
       
-   +  `helm upgrade:` If you already ran helm install, you don’t need to install again. Use helm upgrade to update the existing release.
+   +  `helm upgrade nginx .:` If you already ran helm install, you don’t need to install again. Use helm upgrade to update the existing release.
        + When you Change the chart, Change the values file, Change configs
     
    +  `helm rollback:` Goes back to a previous version of the release. You did helm upgrade and your app broke → use helm rollback to revert.
