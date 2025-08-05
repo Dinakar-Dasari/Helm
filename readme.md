@@ -12,6 +12,20 @@
    + **_release:_**
       + When you deploy a chart to a Kubernetes cluster, Helm creates a release—a specific instance of that chart running in your cluster. You can have multiple releases of the same chart with different configurations.
       + A Helm release is a running instance of a Helm chart deployed into a Kubernetes cluster, along with its configuration and revision history.
+      
+**_Folder structure:_**
+```
+  my-chart/
+  ├── charts/              --------> # Directory for dependency charts (optional)
+  ├── templates/           --------> # Directory for Kubernetes resource templates 
+  │   ├── deployment.yaml  --------> # Template for Kubernetes Deployment
+  │   ├── service.yaml     --------> # Template for Kubernetes Service 
+  │   └── ...
+  ├── values.yaml          --------> # Defines default configuration values for your chart.
+  ├── Chart.yaml           --------> # Metadata about the chart (name, version, description, etc.) 
+  └── README.md            --------> # Documentation for the chart (optional)  
+```
+ 
 
 **Commands:** 
    + `helm install`: Deploys your application for the first time
