@@ -39,7 +39,9 @@
    +  `helm upgrade nginx .:` If you already ran helm install, you don’t need to install again. Use helm upgrade to update the existing release.
        + When you Change the chart, Change the values file, Change configs
     
-   +  `helm rollback:` Goes back to a previous version of the release. You did helm upgrade and your app broke → use helm rollback to revert.
+   +  `helm rollback <chart name> <revision>:` Goes back to a previous version of the release. You did helm upgrade and your app broke → use helm rollback to revert.
+   +  `helm history <chart name>`: To see all the details or versions of the chart
+   +  `helm uninstall <chart name>`: Will delete everything related to that chart
     
 **Why Do We Need Helm?**  
    + Kubernetes is powerful but complex. Deploying an application involves creating and managing multiple YAML files for resources like pods, services, and ingress rules. Doing this manually is error-prone, repetitive, and hard to scale
