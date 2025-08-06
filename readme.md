@@ -32,7 +32,7 @@
      + What does helm install do under the hood?
        + Reads all files in templates/
        + Loads the variables from values.yaml (and overrides)
-       + Renders final YAMLs by replacing placeholders
+       + Renders final YAMLs by replacing **placeholders** (will replace this placeholders with values.yml file)
        + Sends these YAMLs to Kubernetes using kubectl apply internally
        + Tracks this deployment as a release (with versioning)
       
